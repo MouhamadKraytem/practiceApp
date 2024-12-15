@@ -1,1 +1,9 @@
-<p>side-bar works!</p>
+  <!-- Conditional rendering of the main navigation template -->
+  <ng-container *ngIf="mainNavTemplate">
+    <ng-container *ngTemplateOutlet="mainNavTemplate; context: { $implicit: mainNavItems }"></ng-container>
+  </ng-container>
+
+  <!-- Conditional rendering of the sub navigation template -->
+  <ng-container *ngIf="subNavTemplate">
+    <ng-container *ngTemplateOutlet="subNavTemplate; context: { $implicit: subNavItems }"></ng-container>
+  </ng-container>
