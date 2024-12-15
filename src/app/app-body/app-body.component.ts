@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
   selector: 'app-app-body',
@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './app-body.component.css'
 })
 export class AppBodyComponent {
-
+  content = input.required<HTMLElement>();
 }
